@@ -21,6 +21,7 @@ let todos = [
 let currentDraggedElement;
 
 function updateHTML() {
+  //Top Container
   let open = todos.filter((t) => t['category'] == 'open');
   let openContent = document.getElementById('open');
   openContent.innerHTML = '';
@@ -30,6 +31,7 @@ function updateHTML() {
     openContent.innerHTML += generateHTML(element);
   }
 
+  // Bottom Container
   let closed = todos.filter((e) => e['category'] == 'closed');
   let closedContent = document.getElementById('closed');
   closedContent.innerHTML = '';
